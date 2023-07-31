@@ -1,3 +1,23 @@
+## Laravel
+Ejemplo de CRUD hecho con Laravel 10
+### Herramientas
+* SQLyog
+* Xampp 3.3.0
+* Laravel 10
+* AdminLTE
+* Jetstream
+### Log
+[![1.png](https://i.postimg.cc/7LtGQVvk/1.png)](https://postimg.cc/WDr1d0bW)
+### Bienvenido
+[![2.png](https://i.postimg.cc/76CGv2DT/2.png)](https://postimg.cc/jwbdPCDs)
+### Reporte de libros
+[![3.png](https://i.postimg.cc/vTf4Tw4Y/3.png)](https://postimg.cc/V0sfZT9p)
+### Alta de libro
+[![4.png](https://i.postimg.cc/MThczpK3/4.png)](https://postimg.cc/sQ4fcyW5)
+### Modificación de libro
+[![5.png](https://i.postimg.cc/9X7RJZJ6/5.png)](https://postimg.cc/bdqwvDXg)
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
