@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema; use Illuminate\Support\Facades\Schema as FacadesSchema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,6 +20,5 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
-        FacadesSchema::defaultStringLength(191);
     }
 }
