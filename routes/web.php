@@ -12,3 +12,4 @@ Route::get('/', function () {
 
 
 Route::get("/index-libros", [LibrosController::class, "index"])->name("index");
+Route::get("/agregar-libro", [LibrosController::class, "create"])->name("create");
