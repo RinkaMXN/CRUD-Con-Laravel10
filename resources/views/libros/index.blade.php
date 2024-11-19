@@ -4,11 +4,11 @@
 @section('title', 'Tabla principal de libros')  
 
 @section('content')
-    
+
 
     <div class="container mt-5">
         <div class="mb-2">
-            <a href="{{ route('create') }}" class="btn btn-primary icon-size-zoom">
+            <a href="{{ route('agregar') }}" class="btn btn-primary icon-size-zoom">
                 Agregar
             </a>
         </div>
@@ -29,7 +29,9 @@
             <tbody>
                 @foreach($libros as $libro)
                     <tr>
-                    <td><img src="{{ $libro->imagen_libro }}" alt="Imagen del libro" width="100"></td>
+                        <td>
+                            <img src="{{ asset('archivos/' . $libro->imagen_libro) }}" alt="Imagen del libro" width="100">
+                        </td>
                         <th scope="row">{{ $libro->id_libro }}</th>
                         <td>{{ $libro->titulo_libro }}</td>
                         <td>{{ $libro->nombre_autor }}</td>

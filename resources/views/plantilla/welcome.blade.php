@@ -18,6 +18,58 @@
     <!-- end css personalizado   -->
 </head>
 <body>
+    @if (session("success"))
+    <!-- Modal de Success-->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="mb-3">
+                        <i class="fa-solid fa-circle-check" style="font-size: 3rem;"> </i>
+                    </div>
+                    <p class="fw-bold">¡Éxito!</p>
+                    <p>{{ session("error") }}</p>
+                </div>
+                <div class="modal-footer justify-content-center border-0">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endif
+
+    @if (session("error"))
+    <!-- Modal de Error -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Encabezado del modal -->
+                <div class="modal-header border-0">
+                    <!-- Botón para cerrar -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Cuerpo del modal -->
+                <div class="modal-body text-center">
+                    <div class="mb-3">
+                        <!-- Ícono de error -->
+                        <i class="fa-solid fa-circle-xmark text-danger" style="font-size: 3rem;"></i>
+                    </div>
+                    <p class="fw-bold text-danger">¡Error!</p>
+                    <p>{{ session("error") }}</p>
+                </div>
+                <!-- Pie del modal -->
+                <div class="modal-footer justify-content-center border-0">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endif
+
+    
     <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Rinka</a>
