@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- jQuery (Debe ir antes que cualquier script que lo use) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap CDN   -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- end Bootstrap CDN   -->
 
     <!-- Font-Awesome CDN   -->
@@ -28,10 +30,10 @@
                 </div>
                 <div class="modal-body text-center">
                     <div class="mb-3">
-                        <i class="fa-solid fa-circle-check" style="font-size: 3rem;"> </i>
+                        <i class="fa-solid fa-circle-check text-success" style="font-size: 3rem;"> </i>
                     </div>
-                    <p class="fw-bold">¡Éxito!</p>
-                    <p>{{ session("error") }}</p>
+                    <p class="fw-bold text-success">¡Éxito!</p>
+                    <p>{{ session("success") }}</p>
                 </div>
                 <div class="modal-footer justify-content-center border-0">
                     <button type="button" class="btn btn-success" data-bs-dismiss="modal">Continuar</button>
@@ -108,4 +110,17 @@
     </nav>
     @yield('content') 
 </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Mostrar modal de éxito si existe la sesión "correcto"
+            @if (session("success"))
+                new bootstrap.Modal(document.getElementById('successModal')).show();
+            @endif
+
+            // Mostrar modal de error si existe la sesión "incorrecto"
+            @if (session("error"))
+                new bootstrap.Modal(document.getElementById('errorModal')).show();
+            @endif
+        });
+    </script>
 </html>

@@ -8,3 +8,7 @@
 .icon-size-zoom:hover{
     transform: scale(1.1);
 }
+
+.dis{
+    background-color: #e9ecef;
+}
