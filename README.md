@@ -1,3 +1,9 @@
+<p1>CRUD DE LIBROS USANDO BOOTSTRAP</p1>
+<img src="public/archivos/p1" alt="p1">
+<img src="public/archivos/p2" alt="p2">
+<img src="public/archivos/p3" alt="p3">
+<img src="public/archivos/p4" alt="p4">
+<img src="public/archivos/p5" alt="p5">
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
